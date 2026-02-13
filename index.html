@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
+    <link rel="stylesheet" href="style.css"> <!-- Link to external stylesheet -->
+</head>
+<body>
+    <!-- Page 1: Valentine's Question -->
+    <div id="page1" class="page">
+        <div id="container">
+            <div id="image-container"></div>
+            <div id="text-container">
+                <div id="question">Will you be my valentine?</div>
+                <div id="options">
+                    <button id="yes-button" onclick="selectOption('yes')">Yes</button>
+                    <button id="no-button" onclick="goToPage('no-page-1')">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Page (Yes) -->
+    <div id="thank-you" class="page" style="display: none;">
+        <div id="container">
+            <div id="image-container"></div>
+            <div id="text-container">
+                <div id="thank-you-msg">thank youu i kneww itt you would say yess</div>
+                <div id="thank-options" style="margin-top:20px;">
+                    <button onclick="goToPage('page3')">Read a Message</button>
+                    <button onclick="goToPage('page1')">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- No-click Page 1 -->
+    <div id="no-page-1" class="page" style="display: none;">
+        <div id="container">
+            <div>
+                <h2>haw please say yes</h2>
+                <img id="please-gif" src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" alt="please gif" style="max-width:300px; display:block; margin: 10px auto;" />
+                <div style="margin-top:20px;">
+                    <button onclick="goToPage('thank-you')">Yes</button>
+                    <button onclick="goToPage('no-page-2')">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- No-click Page 2 -->
+    <div id="no-page-2" class="page" style="display: none;">
+        <div id="container">
+            <div>
+                <h2>girl say say or I'll prank you</h2>
+                <img id="prank-gif" src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="prank gif" style="max-width:300px; display:block; margin: 10px auto;" />
+                <div style="margin-top:20px;">
+                    <button onclick="goToPage('thank-you')">Yes</button>
+                    <button onclick="goToPage('only-yes')">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Page: only Yes button -->
+    <div id="only-yes" class="page" style="display: none;">
+        <div id="container">
+            <div>
+                <h2>hahahaha ab kya karegiii ladliii</h2>
+                <div style="margin-top:20px;">
+                    <button onclick="goToPage('thank-you')">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 3: Paragraph -->
+    <div id="page3" class="page" style="display: none;">
+        <div id="container">
+            <div id="paragraph-content">
+                <p>Here is a long paragraph about why you're special and why this Valentine's Day means so much to me. 
+                You bring joy, happiness, and love into my life every single day. Your smile brightens my darkest days, 
+                and your laughter fills my heart with warmth. I cherish every moment we spend together, every conversation we have, 
+                and every memory we create. You are my best friend, my love, and my everything. Thank you for being by my side, 
+                for believing in me, and for making my life incredibly beautiful. I can't wait to spend many more Valentine's Days 
+                with you, creating more memories and experiences together. You are truly the love of my life.</p>
+                <div style="margin-top:20px;"><button onclick="goToPage('page1')">Back to Start</button></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>
